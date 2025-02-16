@@ -6,7 +6,7 @@ public void setup()
 }
 public void draw()
 {
-  myFractal(300,300,300);
+  Squares(300,300,300);
 }
 public void mousePressed()//optional
 {
@@ -14,16 +14,16 @@ public void mousePressed()//optional
   stroke((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
   fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*120)+100);
 }
-public void myFractal(int x, int y, int siz)
+public void Squares(int x, int y, int size)
 {
-  rect(x,y,siz,siz);
-  if(siz <= 10){
-   rect(x,y,siz,siz);
+  rect(x,y,size,size);
+  if(size <= 10){
+   rect(x,y,size,size);
   }
   else{
-    myFractal(x-siz/2, y, siz/2);
-    myFractal(x+siz/2, y, siz/2);
-    myFractal(x, y-siz/2, siz/2);
-    myFractal(x, y+siz/2, siz/2);
+    Squares(x-size/2, y, size/2);
+    Squares(x+size/2, y, size/2);
+    Squares(x, y-size/2, size/2);
+    Squares(x, y+size/2, size/2);
   }
 }
